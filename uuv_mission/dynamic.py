@@ -4,7 +4,7 @@ from turtle import pd
 import numpy as np
 import matplotlib.pyplot as plt
 from .terrain import generate_reference_and_limits
-from control import controller 
+from control import Controller 
 
 class Submarine:
     def __init__(self):
