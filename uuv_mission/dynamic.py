@@ -4,6 +4,7 @@ from turtle import pd
 import numpy as np
 import matplotlib.pyplot as plt
 from .terrain import generate_reference_and_limits
+from control import controller 
 
 class Submarine:
     def __init__(self):
@@ -88,7 +89,7 @@ class Mission:
 class ClosedLoop:
     def __init__(self, plant: Submarine, controller):
         self.plant = plant
-        self.controller = controller
+        self.controller = controller()
 
     def simulate(self,  mission: Mission, disturbances: np.ndarray) -> Trajectory:
 
